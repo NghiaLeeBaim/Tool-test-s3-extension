@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "S3 Bandwidth Test",
+    "version": "1.0",
+    "description": "An extension to test upload/download speed with S3 buckets.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage"],
+    "web_accessible_resources": [{
+        "resources": ["aws.js"],
+        "matches": ["<all_urls>"]
+    }]
+}

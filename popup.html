@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Bandwidth Test</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1244.0.min.js"></script>
+</head>
+
+<body>
+    <h1>S3 Bandwidth Test Tool</h1>
+    <form id="s3-form">
+        <label for="endpoint">Endpoint:</label>
+        <input type="text" id="endpoint" placeholder="e.g., s3.example.com" required><br>
+
+        <label for="region">Region:</label>
+        <input type="text" id="region" placeholder="e.g., us-west-1" required><br>
+
+        <label for="accessKey">Access Key:</label>
+        <input type="text" id="accessKey" placeholder="Access Key" required><br>
+
+        <label for="secretKey">Secret Key:</label>
+        <input type="text" id="secretKey" placeholder="Secret Key" required><br>
+
+        <label for="bucket">Bucket Name:</label>
+        <input type="text" id="bucket" placeholder="Bucket Name" required><br>
+
+        <label for="file">Select File to Upload:</label>
+        <input type="file" id="file" required><br>
+
+        <button type="button" id="test-all">Test Upload & Download</button>
+    </form>
+
+    <div id="results"></div>
+    <script src="./aws.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
