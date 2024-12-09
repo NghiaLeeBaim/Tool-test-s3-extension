@@ -6,10 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S3 Bandwidth Test</title>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1244.0.min.js"></script>
+    <style>
+        /* General Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #555;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vh;
+        }
+        
+        img {
+            padding: 20px;
+            width: 150px;
+        }
+        
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+        }
+        
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #results {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+            }
+            input {
+                font-size: 13px;
+            }
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>S3 Bandwidth Test Tool</h1>
+    <img src="	https://portal.longvan.vn/computing-manager/javax.faces.resource/logo-topbar.png.xhtml?ln=images" alt="" srcset="">
     <form id="s3-form">
         <label for="endpoint">Endpoint:</label>
         <input type="text" id="endpoint" placeholder="e.g., s3.example.com" required><br>
@@ -34,7 +121,7 @@
 
     <div id="results"></div>
     <script src="./aws.js"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
