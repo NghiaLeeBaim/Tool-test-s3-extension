@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const uploadStart = performance.now();
             await S3.upload(uploadParams, {
-                partSize: 10 * 1024 * 1024, // 10MB per part
+                partSize: 1024 * 1024 * 1024 * 1024, // 1GB per part
                 queueSize: 10,
             }).promise();
             const uploadEnd = performance.now();
